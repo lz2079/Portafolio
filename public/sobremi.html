@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header__menu">
+            <a class="header__menu__link" href="index.html">Home</a>
+            <a class="header__menu__link" href="sobremi.html">Sobre mí</a>
+            <a class="header__menu__link" href="#" onclick="abrirFormulario()">Contacto</a>
+        </nav>
+    </header>
+    <main class="presentacion">
+        <section class="presentacion__contenido">
+            <h1 class="titulo_sobremi">Sobre mí</h1>
+            <p class="presentacion__contenido__texto">Soy Luis Alberto incipiente desarrollador web...comenzando en este apasionante mundo. 
+                Tengo conocimientos de marketing y publicidad, altamente creativo para implementar proyectos de diversa naturaleza.
+                A lo largo de mí vida he trabajo en diversos entornos que me han hecho obtener experiencia para integrarla 
+                en este nuevo desafío.</p>
+            <P class="presentacion__contenido__texto">Con hábilidad para la redacción creativa y la dirección de arte, siempre me ha llamado la atención las artes visuales y las letras, 
+                por lo que me he especializado en el diseño de sitios web y la creación de contenido digital. 
+                Me encanta trabajar en equipo y aprender de los demás, por lo que estoy dispuesto a colaborar en proyectos de diversa índole. 
+                ¡Hablemos!
+            </P>
+        </section>
+        <img class="presentacion__imagen__sobremi" src="imagem.jpg" alt="Imagen de Luis Alberto trabajando">
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por Luis Alberto. Todos los derechos reservados. © 2025</p>
+    </footer>
+    <script>
+        function abrirFormulario() {
+            window.open(
+                "formulario.html",
+                "Formulario de Contacto",
+                "width=600,height=700,left=200,top=200"
+            );
+        }
+    </script>
+</body>
+</html>

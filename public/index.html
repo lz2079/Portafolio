@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="styles/style.css"> <!-- Ruta relativa -->
+</head>
+<body>
+    <header class="header">
+        <nav class="header__menu">
+            <a class="header__menu__link" href="index.html">Home</a>
+            <a class="header__menu__link" href="sobremi.html">Sobre mí</a>
+            <!-- Botón de Contacto -->
+            <a class="header__menu__link" href="#" onclick="abrirFormulario()">Contacto</a>
+        </nav>
+    </header>
+    <main class="presentacion">
+        <section class="presentacion__contenido">
+            <h1 class="presentacion__contenido__titulo">
+                Eleve tu negocio digital a otro nivel 
+                <strong class="Titulo-destaque">con un Front-end de calidad!
+                </strong></h1>
+                <p class="presentacion__contenido__texto">¡Hola! Soy Luis Alberto, desarrollador Front-end con 
+                especialización en React, HTML y CSS. 
+                <strong> 
+                Ayudo a PYMES a incrementar el valor agregado de su negocio. ¿Hablamos?
+            </strong>
+            </p>
+            <div class="presentacion__botones">
+            <h2 class="presentacion__botones__subtitulo">Accede @ mis redes:</h2>
+            <a class="presentacion__botones__link" href="https://www.instagram.com/">
+                <img src="assets/instagram.png"> <!-- Ruta relativa -->
+                Instagram</a>
+            <a class="presentacion__botones__link" href="https://github.com/lz2079">
+                <img src="assets/github.png"> <!-- Ruta relativa -->
+                Github</a>
+            </div>
+            </section>
+        <img class="presentacion__imagen" src="imagem.jpg" alt="Imagen de Luis Alberto trabajando"> <!-- Ruta relativa -->
+        <aside class="presentacion__aside">
+            <h3 class="presentacion__aside__titulo">Has crecer tu negocio</h3>
+            <ul>
+                <div class="presentacion__aside__lista">
+                <li>Desarrollo de sitios web.</li>
+                <li>Optimización de sitios web.</li>
+                <li>Desarrollo de aplicaciones web.</li>
+                <li>Desarrollo de aplicaciones móviles.</li>
+                </div>
+            </ul>
+        </aside>
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por Luis Alberto. Todos los derechos reservados. © 2025</p>
+    </footer>
+
+    <!-- Función JavaScript para abrir el formulario -->
+    <script>
+        function abrirFormulario() {
+            // Abre una nueva ventana con el formulario
+            window.open(
+                "formulario.html", // Ruta relativa
+                "Formulario de Contacto",
+                "width=600,height=700,left=800,top=800"
+            );
+        }
+    </script>
+</body>
+</html>
