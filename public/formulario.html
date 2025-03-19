@@ -90,31 +90,34 @@
         <input type="submit" value="Enviar">
     </form>
     <script>
-        // Reference to the form
-        const contactForm = document.getElementById('contactForm');
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Reference to the form
+            const contactForm = document.getElementById('contactForm');
 
-        // Add submit event listener to the form
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+            // Add submit event listener to the form
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
 
-            // Get form values
-            const nombre = document.getElementById('nombre').value;
-            const contacto = document.getElementById('contacto').value;
-            const mensaje = document.getElementById('mensaje').value;
-            const comoSeEntero = document.getElementById('como-se-entero').value;
+                // Get form values
+                const nombre = document.getElementById('nombre').value;
+                const contacto = document.getElementById('contacto').value;
+                const mensaje = document.getElementById('mensaje').value;
+                const comoSeEntero = document.getElementById('como-se-entero').value;
 
-            // Save form data to Firestore
-            db.collection('formulario').add({
-                nombre: nombre,
-                contacto: contacto,
-                mensaje: mensaje,
-                comoSeEntero: comoSeEntero,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp()
-            }).then(() => {
-                alert('Mensaje enviado con éxito');
-                contactForm.reset();
-            }).catch((error) => {
-                console.error('Error al enviar el mensaje:', error);
+                try {
+                    // Save form data to Firestore
+                    await db.collection('formulario').add({
+                        nombre: nombre,
+                        contacto: contacto,
+                        mensaje: mensaje,
+                        comoSeEntero: comoSeEntero,
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                    });
+                    alert('Mensaje enviado con éxito');
+                    contactForm.reset();
+                } catch (error) {
+                    console.error('Error al enviar el mensaje:', error);
+                }
             });
         });
     </script>
