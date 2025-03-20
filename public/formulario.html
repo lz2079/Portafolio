@@ -107,6 +107,7 @@
                 try {
                     // Save form data to Firestore
                     await db.collection('formulario').add({
+                        id: firebase.firestore.FieldValue.serverTimestamp().toString(), //Generate unique ID
                         nombre: nombre,
                         contacto: contacto,
                         mensaje: mensaje,
@@ -117,6 +118,7 @@
                     contactForm.reset();
                 } catch (error) {
                     console.error('Error al enviar el mensaje:', error);
+                    alert('Error al enviar el mensaje. Por favor, intenta de nuevo.'); // Mensaje de error para el usuario.
                 }
             });
         });
